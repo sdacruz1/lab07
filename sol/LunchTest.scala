@@ -1,5 +1,5 @@
  package sol
-
+/**
  import tester.Tester
 
  class LunchTest {
@@ -36,3 +36,4 @@
  object LunchTest extends App {
    Tester.run(new LunchTest)
  }
+ */

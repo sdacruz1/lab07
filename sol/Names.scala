@@ -8,10 +8,15 @@ package sol
  */
 class Names (nameList: Array[String]) {
 
-  def clear(name: String) {
-    //TODO: Your code should go here
-  }
+  def clear(name: String){
+    for (i <- 0 until nameList.length) {
+      if (nameList(i) == name) {
+        nameList(i) = "CLEARED"
+      }
+    }
+     }
 }
+
 
 /**
  * Names2 is a class that contains and modifies a list as a var.
@@ -22,7 +27,9 @@ class Names (nameList: Array[String]) {
 class Names2 (private var nameList: List[String]) {
 
   def clear(name: String) {
-    //TODO: Your code goes here
+    nameList = nameList.map(n => n match {
+      case `name` => "CLEARED"
+      case n => n})
   }
 }
 
@@ -35,6 +42,12 @@ class Names2 (private var nameList: List[String]) {
  */
 
 class Names3 (nameList: List[String]) {
-    //TODO: For this part, we want you to come up with the clear method signature yourself!
+
+  def clear (name: String): Names3 = {
+    val newList = nameList.map(n => n match {
+      case `name` => "CLEARED"
+      case n => n})
+    new Names3(newList)
+  }
 
 }
