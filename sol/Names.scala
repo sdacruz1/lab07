@@ -34,11 +34,7 @@ class Names2 (private var nameList: List[String]) {
  * @param nameList - a private val list of Strings
  */
 
-class Names3 (private var nameList: List[String]) {
-
-  class clear(nameList: List[String]) {
+class Names3 (nameList: List[String]) {
     //TODO: For this part, we want you to come up with the clear method signature yourself!
-
-  }
 
 }
